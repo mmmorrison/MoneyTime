@@ -12,6 +12,13 @@ FlowRouter.route('/map', {
   }
 })
 
+FlowRouter.route('/major', {
+  name: 'major',
+  action(){
+    BlazeLayout.render('layout', {child: 'major'});
+  }
+})
+
 FlowRouter.route('/support', {
   name: 'support',
   action(){
