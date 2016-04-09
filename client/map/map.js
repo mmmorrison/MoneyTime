@@ -1,3 +1,9 @@
+// Template.map.onCreated(function() {
+//     this.autorun(() => {
+//     this.subscribe('map')
+//   })
+// });
+
 if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
@@ -36,7 +42,7 @@ if (Meteor.isClient) {
   });
 
   Meteor.startup(function() {
-    GoogleMaps.load();
+    GoogleMaps.load({key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q"});
   });
 
   Template.map.helpers({
