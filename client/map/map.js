@@ -1,9 +1,3 @@
-// Template.map.onCreated(function() {
-//     this.autorun(() => {
-//     this.subscribe('map')
-//   })
-// });
-
 if (Meteor.isClient) {
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {

@@ -1,35 +1,36 @@
 <template name='layout'>
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
 
-      <div class="navbar-header">
-        <a href="/" class="navbar-brand">Time/Money</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">Time/Money</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
 
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/map">Map</a>
-          </li>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/map">Map</a>
+                    </li>
 
-          <li>
-            <a href="/#">Major Events</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
-      </div>
+                    <li>
+                        <a href="/events">Major Events</a>
+                    </li>
 
-<!--
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--
       <div class="collapse navbar-collapse" id="navigation">
      <ul class="nav navbar-nav navbar-right">
        {{> loginButtons }}
@@ -38,12 +39,12 @@
 
 
 
-    </div>
+        </div>
 
-  </div>
-  <div id="main">
-    {{> Template.dynamic template=child}}
-  </div>
+    </div>
+    <div id="main">
+        {{> Template.dynamic template=child}}
+    </div>
 
 
 </template>
