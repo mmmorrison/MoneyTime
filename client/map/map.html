@@ -1,4 +1,7 @@
 <template name="map">
+    <div id="locationField">
+        <input id="autocomplete" placeholder="Enter your address" type="text">
+    </div>
     <div class="map-container">
         {{> googleMap name="map" options=mapOptions}}
     </div>

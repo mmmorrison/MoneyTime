@@ -1,7 +1,6 @@
 <template name='layout'>
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-
             <div class="navbar-header">
                 <a href="/" class="navbar-brand">Time/Money</a>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -28,10 +27,18 @@
                         <a href="#">About</a>
                     </li>
                 </ul>
+
+
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/signin">Sign In/Log In</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
     <div id="main">
         {{> Template.dynamic template=child}}
     </div>

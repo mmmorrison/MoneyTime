@@ -22,5 +22,5 @@ kadira:blaze-layout
 kadira:flow-router
 dburles:google-maps
 insecure
-autopublish
 mdg:geolocation
+autopublish

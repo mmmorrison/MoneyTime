@@ -11,6 +11,9 @@ body {
 .regarding {
     color: #69AA7E;
 }
+.form-horizontal {
+    color: #69AA7E;
+}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }

@@ -34,11 +34,11 @@ FlowRouter.route('/support', {
     }
 })
 
-FlowRouter.route('/about', {
-    name: 'about',
+FlowRouter.route('/signin', {
+    name: 'signin',
     action() {
         BlazeLayout.render('layout', {
-            child: 'about'
+            child: 'signin'
         })
     }
 })
