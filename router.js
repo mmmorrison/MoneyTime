@@ -25,11 +25,11 @@ FlowRouter.route('/majorEvents', {
     }
 })
 
-FlowRouter.route('/support', {
-    name: 'support',
+FlowRouter.route('/contact', {
+    name: 'contact',
     action() {
         BlazeLayout.render('layout', {
-            child: 'support'
+            child: 'contact'
         });
     }
 })
