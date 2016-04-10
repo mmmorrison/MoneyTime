@@ -1,8 +1,5 @@
-<body>
-    {{> majorEvents}}
-</body>
-
 <template name="majorEvents">
+    <sub class='subscript'>Powered by Google</sub>
     <div class="events-container">
         {{#unless geolocationError}} {{> googleMap name="majorEvents" options=mapOptions}} {{else}} Geolocation failed: {{geolocationError}} {{/unless}}
     </div>

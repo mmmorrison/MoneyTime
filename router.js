@@ -16,11 +16,11 @@ FlowRouter.route('/map', {
     }
 })
 
-FlowRouter.route('/events', {
-    name: 'events',
+FlowRouter.route('/majorEvents', {
+    name: 'majorEvents',
     action() {
         BlazeLayout.render('layout', {
-            child: 'events'
+            child: 'majorEvents'
         });
     }
 })
