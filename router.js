@@ -5,7 +5,7 @@ FlowRouter.route('/', {
             child: 'main'
         });
     }
-})
+});
 
 FlowRouter.route('/map', {
     name: 'map',
@@ -14,7 +14,7 @@ FlowRouter.route('/map', {
             child: 'map'
         });
     }
-})
+});
 
 FlowRouter.route('/majorEvents', {
     name: 'majorEvents',
@@ -23,7 +23,7 @@ FlowRouter.route('/majorEvents', {
             child: 'majorEvents'
         });
     }
-})
+});
 
 FlowRouter.route('/contact', {
     name: 'contact',
@@ -32,13 +32,22 @@ FlowRouter.route('/contact', {
             child: 'contact'
         });
     }
-})
+});
 
 FlowRouter.route('/signin', {
     name: 'signin',
     action() {
         BlazeLayout.render('layout', {
             child: 'signin'
+        })
+    }
+});
+
+FlowRouter.route('/users', {
+    name: 'users',
+    action() {
+        BlazeLayout.render('layout', {
+            child: 'users'
         })
     }
 })

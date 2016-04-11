@@ -12,9 +12,9 @@ Template.users.helpers({
     }
 });
 
-// Template.user.helpers({
-//     alreadyFriends: alreadyFriends
-// });
+Template.user.helpers({
+    alreadyFriends: alreadyFriends
+});
 
 Template.user.events({
     'click .add': function(evt) {

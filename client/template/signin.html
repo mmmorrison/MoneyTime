@@ -1,4 +1,11 @@
 <template name='signin'>
+
+    <!-- {{#if currentUser}}
+    <p>You're logged in.</p>
+    {{else}} {{> signin}} {{>login}} {{/if}} -->
+
+
+
     <div class="container">
         <div class="row">
             <div class="well bs-component col-lg-6 col-lg-offset-3">
@@ -23,6 +30,40 @@
                             <label for="company" class="col-lg-2 control-label">Company</label>
                             <div class="col-lg-10">
                                 <input type="company" class="form-control" id="company" placeholder="Company">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name='login'>
+    <div class="container">
+        <div class="row">
+            <div class="well bs-component col-lg-6 col-lg-offset-3">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                             </div>
                         </div>
 
