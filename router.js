@@ -14,7 +14,7 @@ FlowRouter.route('/map', {
             child: 'map'
         });
     }
-});
+})
 
 
 FlowRouter.route('/majorEvents', {

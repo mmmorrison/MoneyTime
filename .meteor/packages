@@ -24,6 +24,7 @@ dburles:google-maps
 insecure
 mdg:geolocation
 autopublish
-accounts-password
 sacha:spin
 jeremy:geocomplete
+session
+ejson
