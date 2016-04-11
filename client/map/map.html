@@ -1,6 +1,6 @@
 <template name="map">
 
-    {{#requireLogin}} {{#if Template.subscriptionsReady}}
+    <!-- {{#requireLogin}} {{#if Template.subscriptionsReady}} -->
 
 
     <div class="form-group locationField">
@@ -12,5 +12,5 @@
         {{> googleMap name="map" options=mapOptions}}
     </div>
 
-    {{else}} {{> spinner}} {{/if}} {{/requireLogin}}
+    <!-- {{else}} {{> spinner}} {{/if}} {{/requireLogin}} -->
 </template>

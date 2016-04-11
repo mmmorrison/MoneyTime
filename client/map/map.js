@@ -60,7 +60,7 @@ if (Meteor.isClient) {
             if (GoogleMaps.loaded()) {
                 return {
                     center: new google.maps.LatLng(41.8701095, -87.6706588),
-                    zoom: 8
+                    zoom: 4
                 };
             }
         }
