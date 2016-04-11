@@ -1,16 +1,10 @@
 <template name="map">
-
-    <!-- {{#requireLogin}} {{#if Template.subscriptionsReady}} -->
-
-
-    <div class="form-group locationField">
-        <!-- <label class="control-label" for="inputDefault">Shipper/Consignee Address</label> -->
-        <input type="text" class="form-control" id="inputDefault" placeholder="Shipper/Consignee Address">
+    <div class="container">
+        <div class="row">
+            <div class="half">
+                <input id="place2" type="text" name="place" placeholder="Start typing...">
+                <div id="map"></div>
+            </div>
+        </div>
     </div>
-
-    <div class="map-container">
-        {{> googleMap name="map" options=mapOptions}}
-    </div>
-
-    <!-- {{else}} {{> spinner}} {{/if}} {{/requireLogin}} -->
 </template>

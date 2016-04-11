@@ -16,6 +16,7 @@ FlowRouter.route('/map', {
     }
 });
 
+
 FlowRouter.route('/majorEvents', {
     name: 'majorEvents',
     action() {
