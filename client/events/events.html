@@ -1,5 +1,8 @@
 <template name="majorEvents">
-    <div class="events-container">
+    <div class="events-container col-sm-4">
         {{#unless geolocationError}} {{> googleMap name="majorEvents" options=mapOptions}} {{else}} Geolocation failed: {{geolocationError}} {{/unless}}
     </div>
+
+    <div class='col-sm-4'> {{> chat}}  </div>
+
 </template>

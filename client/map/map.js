@@ -2,8 +2,8 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
-            key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
-            libraries: "places"
+            "key": "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
+            "libraries": "places",
         });
     });
 
@@ -57,7 +57,7 @@ if (Meteor.isClient) {
 
     Template.map.helpers({
         mapOptions: function() {
-            if (GoogleMaps.loaded()) {
+            if (GoogleMaps.loaded({libraries: "places"})) {
                 return {
                     center: new google.maps.LatLng(41.8701095, -87.6706588),
                     zoom: 4
