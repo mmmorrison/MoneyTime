@@ -2,6 +2,7 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
+            key: "AIzaSyAK_vkvxDH5vsqGkd0Qn-dDmq-rShTA7UA"
             libraries: "places"
         });
     });
