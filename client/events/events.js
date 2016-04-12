@@ -16,6 +16,8 @@ if (Meteor.isClient) {
 
     Template.majorEvents.onCreated(function() {
         var self = this;
+        this.counter = new ReactiveVar(0);
+
 
         GoogleMaps.ready('majorEvents', function(map) {
             var marker;
@@ -68,17 +70,22 @@ if (Meteor.isClient) {
                     zoom: MAP_ZOOM
                 };
             }
-        }
+        },
 
+        counter: function() {
+            return Template.instance().counter.get();
+        }
     })
 
+
     Template.majorEvents.events({
+        'click #add' (event, instance) {
+            instance.counter.set(instance.counter.get() + 1);
+        },
+
         'click #add': function(e) {
             e.preventDefault();
-
-            $('#animalsModal').modal('show');
+            $('#eventModal').modal('show');
         }
     });
-
-
 }
