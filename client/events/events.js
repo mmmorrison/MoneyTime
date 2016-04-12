@@ -74,13 +74,18 @@ if (Meteor.isClient) {
 
         counter: function() {
             return Template.instance().counter.get();
+        },
+
+        delays: function() {
+            return Events.find({})
         }
-    })
+    });
 
 
     Template.majorEvents.events({
-        'click #add' (event, instance) {
+        'click #save' (event, instance) {
             instance.counter.set(instance.counter.get() + 1);
+            console.log(instance.counter.set + this.curValue);
         },
 
         'click #add': function(e) {
