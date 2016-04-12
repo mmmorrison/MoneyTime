@@ -7,7 +7,7 @@ Template.chat.helpers({
     messages: function() {
         return Conversations.findOne({
             chat: Template.instance().id()
-        }).messages;
+        });
     },
     getClass: function(name) {
         if (name === 'system') return 'system';

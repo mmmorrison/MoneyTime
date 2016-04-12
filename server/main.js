@@ -10,7 +10,5 @@ Meteor.publish('markers', function() {
 });
 
 Meteor.publish('chat', function(gameId) {
-    return Conversations.find({
-        game: gameId
-    })
-})
+    return Conversations.find({})
+});

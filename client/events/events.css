@@ -1,7 +1,7 @@
 .events-container {
     width: 100%;
     max-width: 100%;
-    height: 500px;
-    border: 1px solid red;
-    background-color: #ffffff
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
