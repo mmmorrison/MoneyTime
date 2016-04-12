@@ -83,9 +83,19 @@ if (Meteor.isClient) {
 
 
     Template.majorEvents.events({
-        'click #save' (event, instance) {
-            instance.counter.set(instance.counter.get() + 1);
-            console.log(instance.counter.set + this.curValue);
+        'click #save': function(e) {
+            e.preventDefault();
+            var delay = {
+                test: $('#delay').val()
+            };
+            Events.insert({
+                name: "testname",
+                createAt: new Date().valueOf()
+            });
+            $('#eventModal').modal('hide');
+
+
+
         },
 
         'click #add': function(e) {
