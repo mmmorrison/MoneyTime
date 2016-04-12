@@ -90,7 +90,7 @@ if (Meteor.isClient) {
             };
             Events.insert({
                 name: "testname",
-                createAt: new Date().valueOf()
+                createdAt: new Date().valueOf()
             });
             $('#eventModal').modal('hide');
 
