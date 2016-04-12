@@ -72,5 +72,13 @@ if (Meteor.isClient) {
 
     })
 
+    Template.majorEvents.events({
+        'click #add': function(e) {
+            e.preventDefault();
+
+            $('#animalsModal').modal('show');
+        }
+    });
+
 
 }

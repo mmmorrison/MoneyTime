@@ -3,6 +3,39 @@
         {{#unless geolocationError}} {{> googleMap name="majorEvents" options=mapOptions}} {{else}} Geolocation failed: {{geolocationError}} {{/unless}}
     </div>
 
-    <div class='col-sm-4'> {{> chat}}  </div>
+    <div class='col-sm-4'> {{> chat}} </div>
+    <div class="col-sm-4">{{> eventsModal}}</div>
+    <div id="majorEvents">
+        <button type="button" class="btn btn-primary" id="add">Add Delay</button>
 
+        {{#each event}} {{> event}} {{else}}
+        <h4>
+          There are no reported delays.
+        </h4> {{/each}}
+    </div>
+
+</template>
+
+<template name="eventsModal">
+    <div class="modal fade" id="eventModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Delay</h4>
+                    <input type="text">
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" id="location" />
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="save">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </template>

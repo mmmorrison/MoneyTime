@@ -16,7 +16,6 @@ FlowRouter.route('/map', {
     }
 })
 
-
 FlowRouter.route('/majorEvents', {
     name: 'majorEvents',
     action() {
@@ -50,5 +49,14 @@ FlowRouter.route('/users', {
         BlazeLayout.render('layout', {
             child: 'users'
         })
+    }
+})
+
+FlowRouter.route('/api', {
+    name: 'api',
+    action() {
+        BlazeLayout.render('layout'), {
+            child: 'api'
+        }
     }
 })
