@@ -2,12 +2,11 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
-            "key": "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
-            "libraries": "places",
+            libraries: "places"
         });
     });
 
-    Template.map.onCreated(function(input) {
+    Template.map.onCreated(function() {
         GoogleMaps.ready('map', function(map) {
             google.maps.event.addListener(map.instance, 'click', function(event) {
 
@@ -57,12 +56,23 @@ if (Meteor.isClient) {
 
     Template.map.helpers({
         mapOptions: function() {
-            if (GoogleMaps.loaded({libraries: "places"})) {
+            if (GoogleMaps.loaded({})) {
                 return {
                     center: new google.maps.LatLng(41.8701095, -87.6706588),
                     zoom: 4
                 };
             }
         }
+    });
+
+    Template.map.onRendered(function() {
+        this.autorun(() => {
+            if (GoogleMaps.loaded()) {
+                $('#inputDefault').geocomplete({
+                    map: $("#map")
+                });
+            }
+        });
+
     });
 }

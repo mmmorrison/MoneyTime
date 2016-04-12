@@ -3,7 +3,8 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
-            key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q"
+            key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
+            libraries: "places"
         });
     });
 

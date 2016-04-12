@@ -23,7 +23,6 @@ kadira:flow-router
 dburles:google-maps
 insecure
 mdg:geolocation
-autopublish
 sacha:spin
 jeremy:geocomplete
 session
