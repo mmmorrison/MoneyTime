@@ -78,6 +78,7 @@ if (Meteor.isClient) {
         }
     });
 
+
     Template.majorEvents.events({
         'click #save': function(e) {
             e.preventDefault();
@@ -85,8 +86,8 @@ if (Meteor.isClient) {
                 test: $('#delay').val()
             };
             Events.insert({
-                name: "ANOTHERTESTNAME",
-                createAt: new Date().valueOf()
+                name: "MMMMMMMMMMMMMMMMM",
+                createdAt: new Date().valueOf()
             });
             $('#eventModal').modal('hide');
         },

@@ -5,13 +5,16 @@
 
     <div class='col-sm-4'> {{> chat}} </div>
     <div class="col-sm-4">{{> eventsModal}}</div>
+
     <div id="majorEvents">
         <button type="button" class="btn btn-primary" id="add">Add Delay</button>
-
-        {{#each event}} {{> event}} {{else}}
-        <h4>
+        <div>
+            {{#each event}} {{> eventList}} {{else}}
+            <h4>
           There are no reported delays.
         </h4> {{/each}}
+        </div>
     </div>
+    <div class="test col-sm-4">{{> eventList}}</div>
 
 </template>
