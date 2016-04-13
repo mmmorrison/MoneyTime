@@ -1,8 +1,18 @@
 <template name="eventList">
-    {{#each events}}
-    <li>{{lat}} & {{lng}}</li>
+    <h4 id="no_markers"> There are no markers </h4>
+
+    {{#each markers}}
+      <script>
+        var real_address = $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng="+{{lat}}+","+{{lng}}+"&sensor=true").then(function(payload){
+          $("#address_bucket").append("<li>"+payload.results[0].formatted_address+"</li>");
+        });
+         $("#no_markers").hide();
+      </script>
     {{/each}}
+
+    <ul id="address_bucket"></ul>
 </template>
 
 
 <!-- INDIVDUAL EVENTS ARE SUPPOSED TO BE LISTED HERE  -->
+<!-- http://maps.googleapis.com/maps/api/geocode/json?latlng=44.4647452,7.3553838&sensor=true -->

@@ -92,8 +92,8 @@ if (Meteor.isClient) {
             });
 
             Markers.insert({
-                lat: Geolocation.latLng(),
-                lng: Geolocation.latLng()
+                lat: Geolocation.latLng().lat,
+                lng: Geolocation.latLng().lng
 
             });
 
