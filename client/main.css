@@ -16,6 +16,7 @@ body {
     border-radius: 10px;
     height: 400px;
     position: relative;
+    background-color: white;
 }
 .chat ul {
     list-style-type: none;
@@ -46,6 +47,23 @@ body {
 .name {
     text-align: center;
     font-size: 15pt;
+}
+.system {
+    clear: both;
+    text-align: center;
+    font-style: italic;
+}
+.me {
+    color: #F2F9FE;
+    background: #36A7FA;
+    float: right;
+    clear: both;
+}
+.them {
+    color: #191919;
+    background: #E5E5EA;
+    float: left;
+    clear: both;
 }
 
 /*******************************************************************************/

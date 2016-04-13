@@ -9,6 +9,10 @@ Meteor.publish('markers', function() {
     return Meteor.markers.find({})
 });
 
-Meteor.publish('chat', function(gameId) {
+Meteor.publish('chat', function() {
     return Conversations.find({})
+});
+
+Meteor.publish('events', function() {
+    return Events.find({})
 });

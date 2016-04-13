@@ -9,12 +9,16 @@
     <div id="majorEvents">
         <button type="button" class="btn btn-primary" id="add">Add Delay</button>
         <div>
-            {{#each event}} {{> eventList}} {{else}}
-            <h4>
+            <ul>
+                {{#each eventS}} {{> eventList}} {{else}}
+                <h4>
           There are no reported delays.
         </h4> {{/each}}
+            </ul>
         </div>
     </div>
     <div class="test col-sm-4">{{> eventList}}</div>
+
+
 
 </template>
