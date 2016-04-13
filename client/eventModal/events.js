@@ -86,14 +86,12 @@ if (Meteor.isClient) {
                 test: $('#delay').val()
             };
             Events.insert({
-                name: "XXX",
+                username: Meteor.user().username,
                 createdAt: new Date().valueOf(),
                 coordinates: Geolocation.latLng()
 
             });
-            console.log(Geolocation.currentLocation());
-            console.log("****************");
-            console.log(Geolocation.latLng());
+
             $('#eventModal').modal('hide');
         },
 
