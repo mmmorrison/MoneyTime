@@ -10,7 +10,6 @@ if (Meteor.isClient) {
     Template.map.onCreated(function(input) {
         GoogleMaps.ready('map', function(map) {
             google.maps.event.addListener(map.instance, 'click', function(event) {
-
                 Markers.insert({
                     lat: event.latLng.lat(),
                     lng: event.latLng.lng()
@@ -30,12 +29,15 @@ if (Meteor.isClient) {
                     });
 
                     google.maps.event.addListener(marker, 'dragend', function(event) {
+                        console.log("this inner event is", event);
                         Markers.update(marker.id, {
                             $set: {
                                 lat: event.latLng.lat(),
                                 lng: event.latLng.lng()
                             }
+
                         });
+
                     });
 
                     markers[document._id] = marker;
@@ -57,9 +59,7 @@ if (Meteor.isClient) {
 
     Template.map.helpers({
         mapOptions: function() {
-            if (GoogleMaps.loaded({
-                    // libraries: "places"
-                })) {
+            if (GoogleMaps.loaded({})) {
                 return {
                     center: new google.maps.LatLng(41.8701095, -87.6706588),
                     zoom: 4

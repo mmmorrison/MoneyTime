@@ -6,6 +6,7 @@ Meteor.publish('users', function() {
 });
 
 Meteor.publish('markers', function() {
+    console.log("my events are " + Events.find({}));
     return Meteor.markers.find({})
 });
 
