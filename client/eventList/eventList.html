@@ -1,6 +1,7 @@
 <template name="eventList">
-    <li>{{_id}} ** {{name}} ** {{createdAt}}</li>
-
+    {{#each events}}
+    <li>{{lat}} & {{lng}}</li>
+    {{/each}}
 </template>
 
 

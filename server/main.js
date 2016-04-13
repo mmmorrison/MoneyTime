@@ -6,7 +6,6 @@ Meteor.publish('users', function() {
 });
 
 Meteor.publish('markers', function() {
-    console.log("my events are " + Events.find({}));
     return Meteor.markers.find({})
 });
 
@@ -15,5 +14,8 @@ Meteor.publish('chat', function() {
 });
 
 Meteor.publish('events', function() {
-    return Events.find({})
+    return Events.find({}, {
+        lng: 1,
+        lat: 1
+    })
 });
