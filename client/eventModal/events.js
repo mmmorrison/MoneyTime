@@ -78,7 +78,7 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.majorEvents.events({
+    Template.majorEvents.helpers({
         'click #save': function(e) {
             e.preventDefault();
             var delay = {
@@ -98,7 +98,6 @@ if (Meteor.isClient) {
             });
 
             $('#eventModal').modal('hide');
-            console.log(Meteor.user().username, Geolocation.latLng());
         },
 
         'click #add': function(e) {
