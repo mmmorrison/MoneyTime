@@ -3,9 +3,6 @@ if (Meteor.isClient) {
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var labelIndex = 0;
     var contentString = "<div>TEST INFO BOX</div>"
-        // var siteInfoWindowContent = Blaze.toHTMLWithData(Template.siteInfoWindow, infoWindowData);
-
-
 
     Meteor.startup(function() {
         GoogleMaps.load({
@@ -81,11 +78,17 @@ if (Meteor.isClient) {
         }
     });
 
-
     Template.majorEvents.events({
-        'click #save' (event, instance) {
-            instance.counter.set(instance.counter.get() + 1);
-            console.log(instance.counter.set + this.curValue);
+        'click #save': function(e) {
+            e.preventDefault();
+            var delay = {
+                test: $('#delay').val()
+            };
+            Events.insert({
+                name: "ANOTHERTESTNAME",
+                createAt: new Date().valueOf()
+            });
+            $('#eventModal').modal('hide');
         },
 
         'click #add': function(e) {

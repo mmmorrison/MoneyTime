@@ -1,6 +1,6 @@
 <template name='layout'>
     <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <a href="/" class="navbar-brand headerLinks">Time/Money</a>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
@@ -24,16 +24,13 @@
                         <a href="/contact">Contact</a>
                     </li>
                 </ul>
-
-
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <!-- <a class='headerLinks' href="/signin">Register</a> -->
-                            {{>dashboard}}
-                        </li>
+                        {{> loginButtons }}
                     </ul>
                 </div>
+
+
             </div>
         </div>
     </div>

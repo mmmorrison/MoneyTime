@@ -23,6 +23,7 @@ FlowRouter.route('/majorEvents', {
             child: 'majorEvents'
         });
     }
+
 });
 
 FlowRouter.route('/contact', {
@@ -34,11 +35,11 @@ FlowRouter.route('/contact', {
     }
 });
 
-FlowRouter.route('/signin', {
-    name: 'signin',
+FlowRouter.route('/register', {
+    name: 'register',
     action() {
         BlazeLayout.render('layout', {
-            child: 'signin'
+            child: 'resister'
         })
     }
 });
@@ -49,14 +50,5 @@ FlowRouter.route('/users', {
         BlazeLayout.render('layout', {
             child: 'users'
         })
-    }
-})
-
-FlowRouter.route('/api', {
-    name: 'api',
-    action() {
-        BlazeLayout.render('layout'), {
-            child: 'api'
-        }
     }
 })
