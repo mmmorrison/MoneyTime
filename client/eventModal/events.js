@@ -78,7 +78,6 @@ if (Meteor.isClient) {
         }
     });
 
-
     Template.majorEvents.events({
         'click #save': function(e) {
             e.preventDefault();
@@ -89,6 +88,13 @@ if (Meteor.isClient) {
                 username: Meteor.user().username,
                 createdAt: new Date().valueOf(),
                 coordinates: Geolocation.latLng()
+
+            });
+
+            Markers.insert({
+                lat: Geolocation.latLng(),
+                lng: Geolocation.latLng()
+
             });
 
             $('#eventModal').modal('hide');

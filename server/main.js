@@ -14,5 +14,8 @@ Meteor.publish('chat', function() {
 });
 
 Meteor.publish('events', function() {
-    return Events.find({})
+    return Events.find({}, {
+        lng: 1,
+        lat: 1
+    })
 });

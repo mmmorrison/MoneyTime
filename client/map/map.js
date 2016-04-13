@@ -2,15 +2,14 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
-            key: "AIzaSyAK_vkvxDH5vsqGkd0Qn-dDmq-rShTA7UA",
-            libraries: "places"
+            key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
+            libraries: "places",
         });
     });
 
-    Template.map.onCreated(function() {
+    Template.map.onCreated(function(input) {
         GoogleMaps.ready('map', function(map) {
             google.maps.event.addListener(map.instance, 'click', function(event) {
-
                 Markers.insert({
                     lat: event.latLng.lat(),
                     lng: event.latLng.lng()
@@ -30,12 +29,15 @@ if (Meteor.isClient) {
                     });
 
                     google.maps.event.addListener(marker, 'dragend', function(event) {
+                        console.log("this inner event is", event);
                         Markers.update(marker.id, {
                             $set: {
                                 lat: event.latLng.lat(),
                                 lng: event.latLng.lng()
                             }
+
                         });
+
                     });
 
                     markers[document._id] = marker;
@@ -64,16 +66,5 @@ if (Meteor.isClient) {
                 };
             }
         }
-    });
-
-    Template.map.onRendered(function() {
-        this.autorun(() => {
-            if (GoogleMaps.loaded()) {
-                $('#inputDefault').geocomplete({
-                    map: $("#map")
-                });
-            }
-        });
-
     });
 }

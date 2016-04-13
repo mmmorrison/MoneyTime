@@ -1,8 +1,9 @@
 <template name="map">
-    <div class="form-group locationField">
+    <!-- <div class="form-group locationField">
         <input type="text" class="form-control" id="inputDefault" placeholder="Shipper/Consignee Address">
-    </div>
+    </div> -->
 
     <div class="map-container" id="map">
+        {{> googleMap name="map" options=mapOptions}}
     </div>
 </template>
