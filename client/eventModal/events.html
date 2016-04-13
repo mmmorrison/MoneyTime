@@ -1,13 +1,16 @@
 <template name="majorEvents">
-    <div class="events-container col-sm-4">
+    <div class="events-container col-sm-6">
         {{#unless geolocationError}} {{> googleMap name="majorEvents" options=mapOptions}} {{else}} Geolocation failed: {{geolocationError}} {{/unless}}
     </div>
 
-    <div class='col-sm-4'> {{> chat}} </div>
-    <div class="col-sm-4">{{> eventsModal}}</div>
+    <!-- <div class='col-sm-4'> {{> chat}} </div> -->
+    <div class="col-sm-6">
+        <div class="container">
+            {{> eventsModal}}
+        </div>
+    </div>
 
     <div id="majorEvents">
-        <button type="button" class="btn btn-primary" id="add">Add Delay</button>
         <div>
             <ul>
                 {{#each events}} {{> eventList}} {{else}} {{/each}}
@@ -15,5 +18,7 @@
         </div>
     </div>
     <div class="test col-sm-4">{{> eventList}}</div>
+    <button type="button" class="btn btn-primary" id="add">Add Delay</button>
+
 
 </template>
