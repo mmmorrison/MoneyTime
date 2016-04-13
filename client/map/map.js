@@ -2,16 +2,12 @@ if (Meteor.isClient) {
 
     Meteor.startup(function() {
         GoogleMaps.load({
-            "key": "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
-            "libraries": "places",
+            key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
+            libraries: "places",
         });
     });
 
     Template.map.onCreated(function(input) {
-        this.id = () => FlowRouter.getParam('id');
-        this.subscribe('markers', this.id());
-        console.log(Meteor.markers);
-
         GoogleMaps.ready('map', function(map) {
             google.maps.event.addListener(map.instance, 'click', function(event) {
 
@@ -62,7 +58,7 @@ if (Meteor.isClient) {
     Template.map.helpers({
         mapOptions: function() {
             if (GoogleMaps.loaded({
-                    libraries: "places"
+                    // libraries: "places"
                 })) {
                 return {
                     center: new google.maps.LatLng(41.8701095, -87.6706588),
