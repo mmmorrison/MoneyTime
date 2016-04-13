@@ -89,10 +89,10 @@ if (Meteor.isClient) {
                 username: Meteor.user().username,
                 createdAt: new Date().valueOf(),
                 coordinates: Geolocation.latLng()
-
             });
 
             $('#eventModal').modal('hide');
+            console.log(Meteor.user().username, Geolocation.latLng());
         },
 
         'click #add': function(e) {
