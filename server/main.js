@@ -6,7 +6,10 @@ Meteor.publish('users', function() {
 });
 
 Meteor.publish('markers', function() {
-    return Meteor.markers.find({})
+    return Meteor.markers.find({}, {
+        lat: 1,
+        lng: 1
+    })
 });
 
 Meteor.publish('chat', function() {

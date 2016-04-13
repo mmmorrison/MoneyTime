@@ -7,6 +7,9 @@ Template.eventList.helpers({
     events() {
         return Events.find({});
     },
+    markers() {
+        return Markers.find({});
+    },
 
     count() {
         return Events.find({})
