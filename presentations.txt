@@ -6,3 +6,16 @@
 5. What challenges did you run into and how did you overcome them?
 6. Finish with a slide with your name, github, linkedIn, say your name again
 7. Say "Thank you" so the audience knows you're done and can clap for you :)
+
+name change: transportation101
+
+
+1. My name is Maria Morrison and prior to studying web development I worked in intermodal logistics for 13 years.
+
+2. There are roughly 3.5 million truckers on the road.  They are one backbones of our economy and one of the biggest issues drivers and dispatchers face is delay times.  Whenever a driver has to wait above and beyond the allotted free time it cost the shipper, the consigee, the trucking company and most importantly the driver money.  I created this app to help owner/operators report delays before arrive at destination.
+
+3. I used Meteor for the client side and backend as well as MongoDB for the database and GoogleMaps API.
+
+4. Map page shows a visual representations of all the delays reported by the drivers.  On the delay page, the app will use Google's geolocation
+
+5. The challenges
