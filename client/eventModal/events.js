@@ -78,7 +78,6 @@ if (Meteor.isClient) {
         }
     });
 
-
     Template.majorEvents.events({
         'click #save': function(e) {
             e.preventDefault();
