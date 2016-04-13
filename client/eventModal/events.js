@@ -86,9 +86,14 @@ if (Meteor.isClient) {
                 test: $('#delay').val()
             };
             Events.insert({
-                name: "MMMMMMMMMMMMMMMMM",
-                createdAt: new Date().valueOf()
+                name: "XXX",
+                createdAt: new Date().valueOf(),
+                coordinates: Geolocation.latLng()
+
             });
+            console.log(Geolocation.currentLocation());
+            console.log("****************");
+            console.log(Geolocation.latLng());
             $('#eventModal').modal('hide');
         },
 
