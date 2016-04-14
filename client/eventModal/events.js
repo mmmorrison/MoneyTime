@@ -4,12 +4,16 @@ if (Meteor.isClient) {
     var labelIndex = 0;
     var contentString = "test"
 
+
     Meteor.startup(function() {
         GoogleMaps.load({
             key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
             libraries: "places"
         });
     });
+
+
+
 
     Template.majorEvents.onCreated(function() {
         var self = this;
