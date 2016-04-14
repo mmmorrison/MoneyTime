@@ -2,7 +2,9 @@ if (Meteor.isClient) {
     var MAP_ZOOM = 15;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var labelIndex = 0;
-    var contentString = "<div>TEST INFO BOX</div>"
+    var contentString = "test"
+
+
 
     Meteor.startup(function() {
         GoogleMaps.load({
@@ -25,12 +27,12 @@ if (Meteor.isClient) {
                 if (!latLng)
                     return;
 
-                var infowindow = new google.maps.InfoWindow({
-                    content: contentString,
-                    maxWidth: 200
-                });
+                // var infowindow = new google.maps.InfoWindow({
+                //     content: contentString,
+                //     maxWidth: 200
+                // });
 
-                infowindow.open()
+                // infowindow.open()
 
                 // If the marker doesn't yet exist, create it.
                 if (!marker) {
@@ -87,13 +89,16 @@ if (Meteor.isClient) {
             Events.insert({
                 username: Meteor.user().username,
                 createdAt: new Date().valueOf(),
-                coordinates: Geolocation.latLng()
+                coordinates: Geolocation.latLng(),
+                expiration: Date.now() + (120 * 60 * 1000)
             });
 
             Markers.insert({
                 lat: Geolocation.latLng().lat,
                 lng: Geolocation.latLng().lng
             });
+            // console.log(lat, lng);
+
 
             $('#eventModal').modal('hide');
         },
@@ -101,6 +106,18 @@ if (Meteor.isClient) {
         'click #add': function(e) {
             e.preventDefault();
             $('#eventModal').modal('show');
+        },
+
+        getAddres: function() {
+            var lng = Geolocation.latLng().lng;
+            var lat = Geolocation.latLng().lat;
+            var real_address = $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat, lng).then(function(payload) {
+                $("#address_bucket").append("<li>" + payload.results[0].formatted_address + "</li>");
+            });
+            $("#no_markers").hide();
         }
+
     });
+
+
 }
