@@ -11,6 +11,19 @@ body {
 .regarding, .form-horizontal, headerLinks {
     color: #69AA7E;
 }
+img {
+    border: 10px solid red;
+    height: 40vh;
+    margin-left: 7%;
+}
+.reverse {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
 .chat {
     border: 1px solid #ececec;
     border-radius: 10px;
@@ -64,6 +77,9 @@ body {
     background: #E5E5EA;
     float: left;
     clear: both;
+}
+.hero {
+    font-size: 2em;
 }
 
 /*******************************************************************************/
