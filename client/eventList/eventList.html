@@ -1,13 +1,19 @@
 <template name="eventList">
-    <h4 id="no_markers"> There are no markers </h4>
-
-    {{#each markers}}
-      <script>
-        var real_address = $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng="+{{lat}}+","+{{lng}}+"&sensor=true").then(function(payload){
-          $("#address_bucket").append("<li>"+payload.results[0].formatted_address+"</li>");
+    <h4 id="no_markers"> There are no reported delays </h4> {{#each markers}}
+    <!-- <script>
+        var real_address = $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + {
+            {
+                lat
+            }
+        } + "," + {
+            {
+                lng
+            }
+        } + "&sensor=true").then(function(payload) {
+            $("#address_bucket").append("<li>" + payload.results[0].formatted_address + "</li>");
         });
-         $("#no_markers").hide();
-      </script>
+        $("#no_markers").hide();
+    </script> -->
     {{/each}}
 
     <ul id="address_bucket"></ul>
