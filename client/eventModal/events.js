@@ -82,7 +82,7 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.majorEvents.events({
+    Template.majorEvents.helpers({
         'click #save': function(e) {
             e.preventDefault();
             var delay = {
