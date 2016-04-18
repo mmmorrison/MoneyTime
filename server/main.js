@@ -1,9 +1,10 @@
 Meteor.startup(function() {
-    WebApp.connectHandlers.use(function(req, res, next) {
-        res.setHeader('Access-Control-Allow-Origin', "*"); // 2592000s / 30 days
-        return next();
-    })
+  WebApp.connectHandlers.use("/majorEvents", function(req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    return next();
+  });
 })
+
 
 Meteor.publish('users', function() {
     return Meteor.users.find({}, {

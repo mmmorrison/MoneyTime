@@ -110,10 +110,10 @@ if (Meteor.isClient) {
             $('#eventModal').modal('show');
         },
 
-        getAddres: function() {
+        getAddress: function() {
             var lng = Geolocation.latLng().lng;
             var lat = Geolocation.latLng().lat;
-            var real_address = $.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat, lng).then(function(payload) {
+            var real_address = $.get("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat, lng).then(function(payload) {
                 $("#address_bucket").append("<li>" + payload.results[0].formatted_address + "</li>");
             });
             $("#no_markers").hide();
