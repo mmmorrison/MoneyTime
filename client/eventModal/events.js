@@ -1,9 +1,11 @@
 if (Meteor.isClient) {
     var MAP_ZOOM = 15;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var labelIndex = 0;
-    var contentString = "test"
 
+  //   WebApp.connectHandlers.use("/majorEvents", function(req, res, next) {
+  //     res.setHeader("Access-Control-Allow-Origin", "*");
+  //     return next();
+  // });
 
     Meteor.startup(function() {
         GoogleMaps.load({
@@ -11,7 +13,6 @@ if (Meteor.isClient) {
             libraries: "places"
         });
     });
-
 
 
 
@@ -29,20 +30,12 @@ if (Meteor.isClient) {
                 if (!latLng)
                     return;
 
-                // var infowindow = new google.maps.InfoWindow({
-                //     content: contentString,
-                //     maxWidth: 200
-                // });
-
-                // infowindow.open()
 
                 // If the marker doesn't yet exist, create it.
                 if (!marker) {
                     marker = new google.maps.Marker({
                         position: new google.maps.LatLng(latLng.lat, latLng.lng),
                         map: map.instance,
-                        label: labels[labelIndex++ % labels.length],
-                        title: 'TEST EVENT TITLE'
                     })
                 }
                 // The marker already exists, so we'll just change its position.
