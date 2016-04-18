@@ -30,5 +30,5 @@ ejson
 accounts-password
 ian:accounts-ui-bootstrap-3
 reactive-dict
-autopublish
 momentjs:moment
+autopublish
