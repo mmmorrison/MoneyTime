@@ -2,9 +2,9 @@
     <!-- <div class="form-group locationField">
         <input type="text" class="form-control" id="inputDefault" placeholder="Shipper/Consignee Address">
     </div> -->
-
+  {{#requireLogin}}{{#if Template.subscriptionsReady}}
     <div class="map-container" id="map">
         {{> googleMap name="map" options=mapOptions}}
     </div>
-
+  {{/if}} {{/requireLogin}}
 </template>
