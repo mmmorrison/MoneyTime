@@ -26,14 +26,14 @@ FlowRouter.route('/majorEvents', {
 
 });
 
-// FlowRouter.route('/contact', {
-//     name: 'contact',
-//     action() {
-//         BlazeLayout.render('layout', {
-//             child: 'contact'
-//         });
-//     }
-// });
+FlowRouter.route('/contact', {
+    name: 'contact',
+    action() {
+        BlazeLayout.render('layout', {
+            child: 'contact'
+        });
+    }
+});
 
 FlowRouter.route('/register', {
     name: 'register',
