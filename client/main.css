@@ -95,20 +95,17 @@ img {
         opacity: 0;
     }
 }
-.truck4 {
-    /*animation: hideshow 7s ease infinite;*/
-    border: 1px solid red;
+.truck4, .reverse6 {
+    animation: hideshow 5s ease infinite;
     transform: translate(0, 0);
 }
-.truck6 {
-    border: 1px solid green;
-    /*opacity: 0;*/
-    /*animation: hideshow 5s 4.5s ease infinite;*/
+.truck6, .reverse4 {
+    opacity: 0;
+    animation: hideshow 4s 4.5s ease infinite;
 }
-.truck7 {
-    border: 1px solid orange;
-    /*opacity: 0;*/
-    /*animation: hideshow 3s 2.5s ease infinite;*/
+.truck7, .reverse7 {
+    opacity: 0;
+    animation: hideshow 3s 2.5s ease infinite;
 }
 
 /*******************************************************************************/
