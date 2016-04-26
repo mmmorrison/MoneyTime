@@ -1,5 +1,5 @@
-Meteor.startup(function() {
-    process.env.MAIL_URL = "postmaster@sandbox173d719e405046fb87498ac436fa662d.mailgun.org:7dbd0627a944c5486c3dcbe29998691d@smtp.mailgun.org:578";
+Meteor.startup( function() {
+  process.env.MAIL_URL = "postmaster@sandbox173d719e405046fb87498ac436fa662d.mailgun.org:7dbd0627a944c5486c3dcbe29998691d@smtp.mailgun.org:578";
 });
 
 // Email.send({

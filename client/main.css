@@ -10,6 +10,7 @@ body {
 }
 .regarding, .form-horizontal, headerLinks {
     color: #69AA7E;
+    margin-top: 2.5%;
 }
 img {
     border: 10px solid red;
@@ -81,32 +82,56 @@ img {
 .hero {
     font-size: 2em;
 }
-@keyframes hideshow {
-    0% {
-        opacity: 1;
-    }
-    10% {
-        opacity: 1;
-    }
-    15% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+
+.reverse4{
+  position: absolute;
+  top: -65px;
+  left: 0px;
+  animation: moveAcross 10s linear infinite;
 }
-.truck4, .reverse6 {
-    animation: hideshow 5s ease infinite;
-    transform: translate(0, 0);
+.reverse7 {
+  position: absolute;
+  top: -65px;
+  left: 0px;
+  animation: moveAcross 8s linear infinite;
 }
-.truck6, .reverse4 {
-    opacity: 0;
-    animation: hideshow 4s 4.5s ease infinite;
+.reverse6 {
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  animation: moveAcross 10s linear infinite;
 }
-.truck7, .reverse7 {
-    opacity: 0;
-    animation: hideshow 3s 2.5s ease infinite;
+.truck5{
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  animation: moveAcross 7s linear infinite;
 }
+.truck7{
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  animation: moveAcross 9s linear infinite;
+}
+.truck8{
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  animation: moveAcross 7s linear infinite;
+}
+
+@keyframes moveAcross {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/*
+.truckSpace{
+  margin-top: 1%;
+}*/
 
 /*******************************************************************************/
 
