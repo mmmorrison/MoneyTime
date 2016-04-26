@@ -2865,6 +2865,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 340px;
+
 }
 @media (max-device-width: 480px) and (orientation: landscape) {
     .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
@@ -3134,10 +3135,12 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
     background-color: transparent;
 }
 .navbar-default .navbar-text {
-    color: #888888;
+    /*color: #888888;*/
+    color: #69AA7E;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #888888;
+    /*color: #888888;*/
+    color: #69AA7E;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #ffffff;
