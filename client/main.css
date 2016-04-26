@@ -89,35 +89,35 @@ img {
   left: 0px;
   animation: moveAcross 10s linear infinite;
 }
-.reverse7 {
+/*.reverse7 {
   position: absolute;
   top: -65px;
   left: 0px;
-  animation: moveAcross 8s linear infinite;
-}
+  animation: moveAcross 12s linear infinite;
+}*/
 .reverse6 {
   position: absolute;
-  top: 160px;
+  top: 130px;
   left: 0px;
   animation: moveAcross 10s linear infinite;
 }
-.truck5{
+/*.truck5{
   position: absolute;
-  top: 160px;
+  top: 70px;
   left: 0px;
-  animation: moveAcross 7s linear infinite;
-}
+  animation: moveAcross 10s linear infinite;
+}*/
 .truck7{
   position: absolute;
   top: 20px;
   left: 0px;
-  animation: moveAcross 9s linear infinite;
+  animation: moveAcross 10s linear infinite;
 }
 .truck8{
   position: absolute;
   top: 20px;
   left: 0px;
-  animation: moveAcross 7s linear infinite;
+  animation: moveAcross 12s linear infinite;
 }
 
 @keyframes moveAcross {
