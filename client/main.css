@@ -10,7 +10,6 @@ body {
 }
 .regarding, .form-horizontal, headerLinks {
     color: #69AA7E;
-    margin-top: 2.5%;
 }
 img {
     border: 10px solid red;
@@ -83,36 +82,6 @@ img {
     font-size: 2em;
 }
 
-.reverse4{
-  position: absolute;
-  top: -65px;
-  left: 0px;
-  animation: moveAcross 10s linear infinite;
-}
-/*.reverse7 {
-  position: absolute;
-  top: -65px;
-  left: 0px;
-  animation: moveAcross 12s linear infinite;
-}*/
-.reverse6 {
-  position: absolute;
-  top: 130px;
-  left: 0px;
-  animation: moveAcross 10s linear infinite;
-}
-/*.truck5{
-  position: absolute;
-  top: 70px;
-  left: 0px;
-  animation: moveAcross 10s linear infinite;
-}*/
-.truck7{
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  animation: moveAcross 10s linear infinite;
-}
 .truck8{
   position: absolute;
   top: 20px;
@@ -128,10 +97,6 @@ img {
     left: 100%;
   }
 }
-/*
-.truckSpace{
-  margin-top: 1%;
-}*/
 
 /*******************************************************************************/
 
