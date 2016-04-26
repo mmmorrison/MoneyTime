@@ -23,7 +23,6 @@ FlowRouter.route('/majorEvents', {
             child: 'majorEvents'
         });
     }
-
 });
 
 FlowRouter.route('/contact', {
@@ -49,6 +48,14 @@ FlowRouter.route('/users', {
     action() {
         BlazeLayout.render('layout', {
             child: 'users'
+        })
+    }
+})
+FlowRouter.route('/about', {
+    name: 'about',
+    action() {
+        BlazeLayout.render('layout', {
+            child: 'about'
         })
     }
 })
