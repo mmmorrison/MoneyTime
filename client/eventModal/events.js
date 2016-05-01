@@ -2,21 +2,14 @@ if (Meteor.isClient) {
     var MAP_ZOOM = 15;
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-  //   WebApp.connectHandlers.use("/majorEvents", function(req, res, next) {
-  //     res.setHeader("Access-Control-Allow-Origin", "*");
-  //     return next();
-  // });
-
     Meteor.startup(function() {
         GoogleMaps.load({
             key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
             libraries: "places"
         });
-        var x = Meteor.setting.public.imARidiculousHumanBeing
-        console.log(x);
     });
-
-
+    // var keys = Meteor.settings.public;
+    // console.log(keys);
 
     Template.majorEvents.onCreated(function() {
         var self = this;
