@@ -12,6 +12,8 @@ if (Meteor.isClient) {
             key: "AIzaSyCHwkmv_U2MS19Yor_FwdOrfxdk_hDQl4Q",
             libraries: "places"
         });
+        var x = Meteor.setting.public.imARidiculousHumanBeing
+        console.log(x);
     });
 
 

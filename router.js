@@ -59,3 +59,11 @@ FlowRouter.route('/about', {
         })
     }
 })
+FlowRouter.route('/soon', {
+    name: 'soon',
+    action() {
+        BlazeLayout.render('layout', {
+            child: 'soon'
+        })
+    }
+})
